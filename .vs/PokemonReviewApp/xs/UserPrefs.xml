@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{ECC39345-DF66-4387-B153-83A99E60F080}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonReviewApp/appsettings.Development.json">
+    <Files>
+      <File FileName="PokemonReviewApp/Program.cs" Line="12" Column="40" />
+      <File FileName="PokemonReviewApp/Models/Pokemon.cs" Line="11" Column="3" />
+      <File FileName="PokemonReviewApp/Models/Reviewer.cs" Line="1" Column="1" />
+      <File FileName="PokemonReviewApp/Models/PokemonCategory.cs" Line="13" Column="1" />
+      <File FileName="PokemonReviewApp/Models/PokemonOwner.cs" Line="2" Column="34" />
+      <File FileName="PokemonReviewApp/Models/Category.cs" Line="8" Column="70" />
+      <File FileName="PokemonReviewApp/appsettings.Development.json" Line="7" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PokemonReviewApp" expanded="True">
+            <Node name="PokemonReviewApp" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True">
+                <Node name="appsettings.Development.json" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.PokemonReviewApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
