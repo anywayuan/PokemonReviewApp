@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PokemonReviewApp;
 using PokemonReviewApp.Data;
 using PokemonReviewApp.Interfaces;
@@ -12,8 +12,12 @@ builder.Services.AddControllers();
 // 数据种子设定
 builder.Services.AddTransient<Seed>();
 
+// DTO自动映射
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 // 依赖注入
 builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -27,6 +31,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 var app = builder.Build();
 
+// 数据种子
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
     SeedData(app);
 
@@ -47,6 +52,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+};
 
 app.UseHttpsRedirection();
 

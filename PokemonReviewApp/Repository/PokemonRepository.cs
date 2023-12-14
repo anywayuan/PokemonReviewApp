@@ -14,14 +14,14 @@ namespace PokemonReviewApp.Repository
 			_context = context;
 		}
 
-        public Pokemon GetPokemon(int id)
+        public Pokemon? GetPokemon(int id)
         {
-            return _context.Pokemon.Where(p => p.Id == id).FirstOrDefault();
+            return _context.Pokemon.FirstOrDefault(p => p.Id == id);
         }
 
-        public Pokemon GetPokemon(string name)
+        public Pokemon? GetPokemon(string name)
         {
-            return _context.Pokemon.Where(p => p.Name == name).FirstOrDefault();
+            return _context.Pokemon.FirstOrDefault(p => p.Name == name);
         }
 
         public decimal GetPokemonRating(int pokeId)

@@ -1,4 +1,4 @@
-﻿namespace PokemonReviewApp.Models
+namespace PokemonReviewApp.Models
 {
     public class Category
     {
