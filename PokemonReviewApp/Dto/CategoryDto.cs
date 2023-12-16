@@ -1,4 +1,4 @@
-﻿namespace PokemonReviewApp.Controllers
+﻿namespace PokemonReviewApp.Dto
 {
     internal class CategoryDto
     {
