@@ -39,12 +39,25 @@ namespace PokemonReviewApp.Controllers
             if (!_categoryRepository.CategoryExists(categoryId))
                 return NotFound();
 
-            var pokemon = _mapper.Map<PokemonDto>(_categoryRepository.GetCategory(categoryId));
+            var category = _mapper.Map<CategoryDto>(_categoryRepository.GetCategory(categoryId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(pokemon);
+            return Ok(category);
+        }
+
+        [HttpGet("pokemon/{categoryId}")]
+        [ProducesResponseType(200, Type = typeof(Category))]
+        [ProducesResponseType(400)]
+        public IActionResult GetpokmonByCategoryId(int categoryId)
+        {
+            var pokemons = _mapper.Map<List<PokemonDto>>(_categoryRepository.GetPokemonByCategory(categoryId));
+            
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(pokemons);
         }
     }
 }

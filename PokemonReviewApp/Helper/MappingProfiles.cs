@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using PokemonReviewApp.Controllers;
 using PokemonReviewApp.Dto;
 using PokemonReviewApp.Models;
 
@@ -11,6 +10,7 @@ namespace PokemonReviewApp.Helper
 		{
 			CreateMap<Pokemon, PokemonDto>();
 			CreateMap<Category, CategoryDto>();
+			CreateMap<Country, CountryDto>();
 		}
 	}
 }
