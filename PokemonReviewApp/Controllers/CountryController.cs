@@ -18,7 +18,10 @@ namespace PokemonReviewApp.Controllers
             _countryRepository = countryRepository;
             _mapper = mapper;
         }   
-        
+        /// <summary>
+        /// 获取所有国家
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Country>))]
         public IActionResult GetCountries()
@@ -30,7 +33,11 @@ namespace PokemonReviewApp.Controllers
             
             return Ok(countries);
         }
-        
+        /// <summary>
+        /// 根据国家id获取国家
+        /// </summary>
+        /// <param name="countryId"></param>
+        /// <returns></returns>
         [HttpGet("{countryId:int}")]
         [ProducesResponseType(200, Type = typeof(Country))]
         [ProducesResponseType(400)]
@@ -46,7 +53,11 @@ namespace PokemonReviewApp.Controllers
             
             return Ok(country);
         }
-        
+        /// <summary>
+        /// 根据拥有者id获取国家
+        /// </summary>
+        /// <param name="ownerId"></param>
+        /// <returns></returns>
         [HttpGet("owner/{ownerId:int}")]
         [ProducesResponseType(200, Type = typeof(Country))]
         public IActionResult GetCountryOfAOwner(int ownerId)
